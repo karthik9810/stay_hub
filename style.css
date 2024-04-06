@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* assuming 'Poppins' is a valid font */
+    
+}
+
+.header {
+    min-height: 100vh;
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/banner.png);
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+}
+/*
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+}*/
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    color: #fff; /* Text color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Drop shadow */
+}
+
+nav a {
+    color: #fff; /* Text color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold font */
+    margin: 0 15px; /* Spacing between links */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav a:hover {
+    color: #ffcc00; /* Text color on hover */
+}
+
+.logo {
+    font-size: 24px; /* Logo font size */
+    width: 150px;
+}
+
+.nav-links li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 30px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: aqua;
+}
+/*
+.register-btn{
+    background-color: #fff;
+    color: #000;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 15px;
+}*/
+
+.register-btn {
+    background-color: #d32945; /* Green background */
+    color: white; /* White text */
+    padding: 12px 24px; /* Larger padding */
+    border: none; /* No border */
+    border-radius: 25px; /* Rounded corners */
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+}
+
+.register-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Move up slightly on hover */
+}
+
+.register-btn:active {
+    transform: translateY(0); /* Reset transform on click */
+    box-shadow: none; /* Remove drop shadow on click */
+}
+
+.container{
+    padding: 0.7%;
+}
+.header h1{
+    font-size: 4vm;
+    font-weight: 500;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 22%;
+    font-size: 75px;
+}
+*/
+/* searcj bar section  code 
+.search-bar{
+    background: #fff;
+    width: 70%;
+    margin: 30px auto;
+    padding: 6px 10px 6px 30px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+.search-bar form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.search-bar form input{
+   display: block;
+   border: 0;
+   outline: none;
+   background: transparent;
+   
+}
+.search-bar form button{
+    background: #ff5361;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+search-bar form button img{
+    width: 15px;
+    margin-top: 7px;
+}
+
+.location-input{
+    flex: 1;
+}*/
+
+.container {
+    text-align: center;
+    margin-top: 50px; /* Adjust the margin-top as needed */
+}
+
+.search-form {
+    width: 70%;
+    margin: 20px auto 0; /* Added margin-top to create space at the top */
+    border-radius: 50px; /* Make the entire search form round */
+    overflow: hidden; /* Ensure contents inside the rounded form are not visible outside */
+    background-color: #fff; /* Add background color to the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    padding: 10px; /* Add padding to the search form */
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px; /* Add padding inside the form */
+}
+
+.form-group {
+    margin: 10px;
+    flex: 1; /* Distribute form groups evenly */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px); /* Adjust width to fill the form group */
+    padding: 8px;
+    border: none;
+    border-radius: 50px; /* Make input fields round */
+    text-align: center;
+    margin: 5px;
+}
+
+button {
+    background-color: #ff5361;
+    color: #fff;
+    border: none;
+    border-radius: 50px; /* Make button round */
+    padding: 8px 16px; /* Reduce padding for button */
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button img {
+    width: 20px;
+    vertical-align: middle;
+}
+/* --------------Exclusive section start --------------*/
+
+.sub-title {
+    margin: 50px 0 20px;
+    font-size: 2.2vm;
+    font-weight: 500;
+    color: #333;
+}
+
+.exclusives {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+    background-color: aliceblue;
+}
+
+.exclusives div {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exclusives div img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.exclusives div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exclusives div span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.exclusives div:hover span {
+    opacity: 1;
+}
+.exclusives .price.active {
+    color: #ff5361; /* Change the color to highlight */
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff5361; /* Add text-shadow for glow effect */
+    }
+    to {
+        text-shadow: 0 0 20px #ff5361; /* Increase text-shadow for stronger glow */
+    }
+}
+
+/* ---------------------------Trending places  --------------------------------------------*/
+.sub-title {
+    margin: 50px 0 20px;
+    font-size: 40px; /* Adjusted font size */
+    font-weight: 500;
+    color:aqua ;
+    text-align: center; /* Center aligned */
+}
+.trending {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px ,1fr));
+    grid-gap: 30px;
+    margin-bottom: 30px;
+}
+
+.trending div {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.trending div img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trending div:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trending div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the overlay color and opacity */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.trending div:hover::before {
+    opacity: 1;
+}
+
+.trending div h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #ff5361;
+    font-size: 1.2em;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(20px); /* Initially move the h3 down */
+}
+
+.trending div:hover h3 {
+    opacity: 1;
+    transform: translateY(0); /* Move the h3 back up on hover */
+    font-weight: bold; /* Highlight the location name */
+}
+/* -------------------------------call actin deisn g-----------------------------------------------*/
+
+.cta {
+    margin: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/banner-2.png");
+    background-size: cover;
+    background-position: center;
+    padding: 5%;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.cta h3 {
+    font-size: 4vw;
+    line-height: 5.3vw;
+    font-weight: 500;
+}
+
+.cta p {
+    font-size: 18px;
+    margin: 20px 0; /* Increase margin to add space between paragraphs */
+}
+
+.cta .cta-btn {
+    background: #ff5361;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 30px; /* Add space between button and paragraphs */
+}
+
+/* ---------------------------------------storeis ----------------------------------*/
+/* Modern CSS for 2024 */
+
+/* Modern Classic Interior Design */
+
+/* General layout for the stories */
+.stories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Individual story item */
+.stories div {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 250px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+.stories div p {
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center; /* Center the text */
+    width: 90%; /* Limit the width of the paragraph */
+}
+
+
+/* Story image */
+.stories div img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect: lift and darken */
+.stories div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay on hover */
+.stories div:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Text caption */
+
+
+/* Show text on hover */
+.stories div:hover p {
+    opacity: 1;
+}
+.start-btn {
+    text-decoration: none;
+    background: linear-gradient(135deg, #ff8a00, #e52e71); /* Gradient background */
+    color: #fff;
+    width: 70%;
+    max-width: 300px; /* Reduced max-width */
+    display: block;
+    text-align: center;
+    margin: 40px auto; /* Reduced margin */
+    padding: 12px 20px; /* Reduced padding */
+    border-radius: 20px; /* Reduced border radius */
+    font-size: 18px; /* Reduced font size */
+    font-weight: bold; /* Added font weight */
+    border: 2px solid transparent; /* Added border */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+.start-btn:hover {
+    background: linear-gradient(135deg, #e52e71, #ff8a00); /* Gradient background on hover */
+    color: #fff;
+    border-color: #fff; /* Change border color on hover */
+}
+
+
+/* an=bout messager */
+.about-msg {
+    text-align: center;
+    margin: 80px 0;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-msg h2 {
+    font-size: 2.5em; /* Increase heading font size */
+    margin-bottom: 20px; /* Add some bottom margin */
+    color: #ff5361; /* Change heading color */
+}
+
+.about-msg p {
+    margin-bottom: 30px; /* Add bottom margin to paragraphs */
+}
+
+/* ------------ footer sectiom ----------------*/
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #ccc;
+    border-radius: 20px;
+    transition: background-color 0.3s ease; /* Add smooth transition for background color */
+}
+
+.footer:hover {
+    background-color: #e0e0e0; /* Change background color on hover */
+}
+
+.social-icons a {
+    margin: 0 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Add smooth transition for icon hover */
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px); /* Move the icon up slightly on hover */
+}
+
+.social-icons i {
+    font-size: 28px; /* Increase icon size */
+    color: #007bff; /* Use a vibrant color for icons */
+}
+
+.footer-text p {
+    margin-bottom: 10px; /* Increase margin bottom for better spacing */
+    font-size: 16px; /* Increase font size */
+    font-weight: bold; /* Add bold styling */
+}
+.active{
+    position: relative;
+}
+.active::after{
+    content: '';
+    background: #fff;
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -12px;
+    border-radius: 2px;
+}
